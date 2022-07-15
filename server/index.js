@@ -18,6 +18,9 @@ app.use('/posts', postsRouter);
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.URL_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true});
+//.env file contains as follow:
+//PORT = 5000
+// URL_CONNECTION = mongodb+srv://traverse:traverse@cluster0.50ykn.mongodb.net/?retryWrites=true&w=majority
 
 app.listen(PORT, (err) => {
     if (err) console.log(err);
